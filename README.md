@@ -675,4 +675,21 @@ function submitAssessment() {
 }
 
 function closeModal() {
-  document.getElementById
+  document.getElementById("scoreModal").style.display = "none";
+}
+
+function handleBackdropClick(e) {
+  if (e.target.id === "scoreModal") {
+    closeModal();
+  }
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeModal();
+  }
+});
+</script>
+
+</body>
+</html>
